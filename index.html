@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lanchonete do Saulo</title>
+    <title>MAFRA'S LANCHES</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Lanchonete do Saulo</h1>
+        <h1>MAFRA'S LANCHES</h1>
         <p>Peça sua Pizza e Lanche aqui!</p>
     </header>
 
@@ -29,5 +29,21 @@
             <input type="text" placeholder="Bairro" style="width:100%; padding:10px; border:1px solid #ccc; border-radius:5px;">
         </section>
     </main>
+    <script>
+        function salvarEndereco() {
+            // Pegamos o valor que o cliente digitou no campo Nome
+            const nome = document.getElementById('cliente-nome').value;
+            const rua = document.getElementById('cliente-rua').value;
+
+            // Verificamos se ele não deixou vazio
+            if (nome === "" || rua === "") {
+                alert("Por favor, preencha o seu nome e o endereço!");
+            } else {
+                // Mostramos um alerta de sucesso
+                alert("Obrigado, " + nome + "! Seus dados de entrega foram salvos.");
+                console.log("Endereço salvo para: " + rua);
+            }
+        }
+    </script>
 </body>
 </html>
