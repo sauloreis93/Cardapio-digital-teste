@@ -20,6 +20,9 @@
             <span class="preco">R$ 45,00</span>
             <button class="btn-adicionar" onclick="adicionarAoCarrinho(45.00)">Adicionar ao Carrinho</button>
             <p style="font-weight: bold; margin-top: 10px;">Total do Pedido: R$ <span id="valor-total">0,00</span></p>
+            <button onclick="limparCarrinho()" style="background-color: #e74c3c; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; margin-top: 10px;">
+    Limpar Carrinho
+</button>
         </section>
 
         <section class="endereco" style="background:white; padding:20px; border-radius:10px; margin-top:20px; text-align: left;">
@@ -41,6 +44,17 @@
         document.getElementById('valor-total').innerText = totalPedido.toFixed(2).replace('.', ',');
         
         alert("Pizza adicionada! Total agora: R$ " + totalPedido.toFixed(2).replace('.', ','));
+    }
+
+    function limparCarrinho() {
+        // 1. Voltamos a variável do total para zero
+        totalPedido = 0;
+        
+        // 2. Atualizamos o texto na tela para mostrar 0,00
+        document.getElementById('valor-total').innerText = "0,00";
+        
+        // 3. Avisamos o usuário
+        alert("O carrinho foi esvaziado!");
     }
         function salvarEndereco() {
             // Pegamos o valor que o cliente digitou no campo Nome
