@@ -1,7 +1,7 @@
 /* Configurações Gerais */
 body {
     /* O 'url' agora aponta para o nome do seu arquivo local */
-    background-image: url('fundo.jpg');
+    background-image: url('img/fundo.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
