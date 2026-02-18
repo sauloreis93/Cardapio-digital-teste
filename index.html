@@ -18,7 +18,7 @@
             <h2>Pizza de Calabresa</h2>
             <p>Massa artesanal, molho de tomate e mussarela.</p>
             <span class="preco">R$ 45,00</span>
-            <button class="btn-adicionar" onclick="adicionarAoCarrinho(45.00)">Adicionar ao Carrinho</button>
+            <button class="btn-adicionar" onclick="adicionarAoCarrinho('Pizza', 45.00)">Adicionar ao Carrinho</button>
             <p style="font-weight: bold; margin-top: 10px;">Total do Pedido: R$ <span id="valor-total">0,00</span></p>
         
         <button onclick="limparCarrinho()" style="background-color: #e74c3c; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; margin-top: 10px;">
@@ -30,7 +30,7 @@
             <h2>Refrigerante Lata</h2>
             <p>Geladinho para acompanhar sua pizza.</p>
             <span class="preco">R$ 8,00</span>
-            <button class="btn-adicionar" onclick="adicionarAoCarrinho(8.00)">Adicionar ao Carrinho</button>
+            <button class="btn-adicionar" onclick="adicionarAoCarrinho( 'Refrigerante', 8.00)">Adicionar ao Carrinho</button>
         </section>
 
         <section class="endereco" style="background:white; padding:20px; border-radius:10px; margin-top:20px; text-align: left;">
@@ -44,14 +44,14 @@
     <script>
         let totalPedido = 0; // Começamos o carrinho com zero
 
-    function adicionarAoCarrinho(preco) {
-        // Somamos o preço da pizza ao total atual
+    // Adicionamos 'nomeProduto' aqui para a função saber o que foi clicado
+    function adicionarAoCarrinho(nomeProduto, preco) {
         totalPedido = totalPedido + preco;
         
-        // Atualizamos o valor que aparece na tela (o span que criamos acima)
         document.getElementById('valor-total').innerText = totalPedido.toFixed(2).replace('.', ',');
         
-        alert("Pizza adicionada! Total agora: R$ " + totalPedido.toFixed(2).replace('.', ','));
+        // Agora o alerta vai dizer o nome certo (Pizza ou Refrigerante)
+        alert(nomeProduto + " adicionado! Total agora: R$ " + totalPedido.toFixed(2).replace('.', ','));
     }
 
     function limparCarrinho() {
