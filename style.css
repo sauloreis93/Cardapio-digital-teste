@@ -1,7 +1,7 @@
 /* Configurações Gerais */
 body {
     /* O 'url' agora aponta para o nome do seu arquivo local */
-    background-image: url('fundo.jpg'); 
+    background-image: url('fundo.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -22,7 +22,11 @@ header {
 /* Container do Cardápio */
 .cardapio {
     width: 90%;
-    max-width: 500px; /* Não deixa o site ficar largo demais no PC */
+    max-width: 500px;
+    margin: 0 auto; /* ISSO CENTRALIZA O CONTEÚDO NO MEIO DA TELA */
+    background-color: rgba(255, 255, 255, 0.9); /* Opcional: deixa o fundo branco meio transparente */
+    padding: 20px;
+    border-radius: 15px;
 }
 
 /* Estilo de cada Produto */
