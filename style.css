@@ -1,12 +1,11 @@
 /* Configurações Gerais */
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #f0f2f5; /* Fundo cinza claro */
+    /* O 'url' agora aponta para o nome do seu arquivo local */
+    background-image: url('WhatsApp Image 2026-02-18 at 18.09.25'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 /* Cabeçalho */
